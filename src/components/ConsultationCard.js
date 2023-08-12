@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const ConsultationCard = ({ userName, consultationDate, topic }) => {
     return (
@@ -10,11 +11,11 @@ const ConsultationCard = ({ userName, consultationDate, topic }) => {
     );
 };
 
-// Default props
-ConsultationCard.defaultProps = {
-    userName: 'Anonymous',
-    consultationDate: 'N/A',
-    topic: 'General'
+// Prop types validation
+ConsultationCard.propTypes = {
+    userName: PropTypes.string.isRequired,
+    consultationDate: PropTypes.string.isRequired,
+    topic: PropTypes.string.isRequired
 };
 
 export default ConsultationCard;
