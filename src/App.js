@@ -19,6 +19,8 @@ const App = () => {
     <div className="app">
       <ConsultationCard {...consultationData} />
       <ContentCard {...contentData} />
+      <ConsultationCard />
+      <ContentCard />
     </div>
   );
 };

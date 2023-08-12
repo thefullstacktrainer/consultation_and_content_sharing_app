@@ -10,4 +10,11 @@ const ContentCard = ({ title, description, author }) => {
     );
 };
 
+// Default props
+ContentCard.defaultProps = {
+    title: 'Untitled',
+    description: 'No description available',
+    author: 'Unknown'
+};
+
 export default ContentCard;

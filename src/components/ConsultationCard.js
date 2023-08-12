@@ -10,4 +10,11 @@ const ConsultationCard = ({ userName, consultationDate, topic }) => {
     );
 };
 
+// Default props
+ConsultationCard.defaultProps = {
+    userName: 'Anonymous',
+    consultationDate: 'N/A',
+    topic: 'General'
+};
+
 export default ConsultationCard;
