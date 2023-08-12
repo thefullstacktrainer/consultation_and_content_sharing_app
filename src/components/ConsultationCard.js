@@ -1,21 +1,21 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React, { useState } from 'react';
 
 const ConsultationCard = ({ userName, consultationDate, topic }) => {
+    const [likes, setLikes] = useState(0);
+
+    const handleLike = () => {
+        setLikes(likes + 1);
+    };
+
     return (
         <div className="consultation-card">
             <h3>{userName}</h3>
             <p>Date: {consultationDate}</p>
             <p>Topic: {topic}</p>
+            <button onClick={handleLike}>Like</button>
+            <p>Likes: {likes}</p>
         </div>
     );
-};
-
-// Prop types validation
-ConsultationCard.propTypes = {
-    userName: PropTypes.string.isRequired,
-    consultationDate: PropTypes.string.isRequired,
-    topic: PropTypes.string.isRequired
 };
 
 export default ConsultationCard;

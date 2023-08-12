@@ -2,6 +2,8 @@ import React from 'react';
 import ConsultationList from './components/ConsultationList';
 import ContentSharing from './components/ContentSharing';
 import EnhancedConsultationCard from './components/EnhancedConsultationCard';
+import ContentSharingPage from './components/ContentSharingPage';
+
 
 const App = () => {
   const consultations = [
@@ -28,6 +30,10 @@ const App = () => {
       <EnhancedConsultationCard {...consultationData} />
 
       <ContentSharing contentList={contentList} />
+      <div>
+        <h1>Online Consultation and Content Sharing Platform</h1>
+        <ContentSharingPage />
+      </div>
     </div>
   );
 };
