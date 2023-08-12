@@ -1,7 +1,7 @@
 import React from 'react';
 import ConsultationCard from './components/ConsultationCard';
 import ContentCard from './components/ContentCard';
-
+import ParentComponent from './components/ParentComponent';
 const App = () => {
   const consultationData = {
     userName: 'John Doe',
@@ -19,6 +19,7 @@ const App = () => {
     <div className="app">
       <ConsultationCard {...consultationData} />
       <ContentCard {...contentData} />
+      <ParentComponent />
     </div>
   );
 };
