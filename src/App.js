@@ -1,26 +1,33 @@
 import React from 'react';
-import ConsultationCard from './components/ConsultationCard';
-import ContentCard from './components/ContentCard';
+import ConsultationList from './components/ConsultationList';
+import ContentSharing from './components/ContentSharing';
+import EnhancedConsultationCard from './components/EnhancedConsultationCard';
 
 const App = () => {
-  const consultationData = {
-    userName: 'John Doe',
-    consultationDate: '2023-08-12',
-    topic: 'Healthcare'
-  };
+  const consultations = [
+    { userName: 'Vikash', consultationDate: '2023-09-12', topic: 'Healthcare' },
+    { userName: 'Raxith', consultationDate: '2023-09-15', topic: 'Technology' }
+  ];
 
-  const contentData = {
-    title: 'React Tips',
-    description: 'Useful tips for working with React.',
-    author: 'Jane Smith'
+  const contentList = [
+    { title: 'React Tips', description: 'Useful tips for working with React.', author: 'Manoj' },
+    { title: 'Redux Guide', description: 'A comprehensive guide to using Redux.', author: 'Sumanth' }
+  ];
+
+  const consultationData = {
+    userName: 'Lakshmikant D',
+    consultationDate: '2023-08-12',
+    topic: 'Software Rust Training',
+    comments: ['Great consultation!', 'Very informative.'],
+    likes: 10
   };
 
   return (
-    <div className="app">
-      <ConsultationCard {...consultationData} />
-      <ContentCard {...contentData} />
-      <ConsultationCard />
-      <ContentCard />
+    <div>
+      <ConsultationList consultations={consultations} />
+      <EnhancedConsultationCard {...consultationData} />
+
+      <ContentSharing contentList={contentList} />
     </div>
   );
 };
