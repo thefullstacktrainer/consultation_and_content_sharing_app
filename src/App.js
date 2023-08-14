@@ -3,7 +3,7 @@ import ConsultationList from './components/ConsultationList';
 import ContentSharing from './components/ContentSharing';
 import EnhancedConsultationCard from './components/EnhancedConsultationCard';
 import ContentSharingPage from './components/ContentSharingPage';
-
+import ConsultationSearch from './components/ConsultationSearch';
 
 const App = () => {
   const consultations = [
@@ -23,9 +23,15 @@ const App = () => {
     comments: ['Great consultation!', 'Very informative.'],
     likes: 10
   };
+  const handleSearch = (searchValue) => {
+    // Perform search logic using the searchValue
+    console.log('Searching for:', searchValue);
+  };
 
   return (
     <div>
+      <h2>Search Consultations</h2>
+      <ConsultationSearch onSearch={handleSearch} />
       <ConsultationList consultations={consultations} />
       <EnhancedConsultationCard {...consultationData} />
 
