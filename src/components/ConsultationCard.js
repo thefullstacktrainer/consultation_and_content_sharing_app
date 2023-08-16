@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 
-const ConsultationCard = ({ userName, consultationDate, topic }) => {
+const ConsultationCard = ({ userName, consultationDate, topic, onLike }) => {
     const [likes, setLikes] = useState(0);
 
     const handleLike = () => {
         setLikes(likes + 1);
+        onLike(userName);
     };
 
     const cardStyle = {

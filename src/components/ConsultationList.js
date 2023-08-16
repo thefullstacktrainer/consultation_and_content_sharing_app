@@ -13,7 +13,7 @@ const ConsultationList = ({ consultations }) => {
             // Perform cleanup tasks like canceling subscriptions or timers
         };
     }, []);
-
+    const cbFun = (name) => console.log(name)
     return (
         <div className="consultation-list">
             <h2>Consultations</h2>
@@ -23,6 +23,7 @@ const ConsultationList = ({ consultations }) => {
                     userName={consultation.userName}
                     consultationDate={consultation.consultationDate}
                     topic={consultation.topic}
+                    onLike={cbFun}
                 />
             ))}
             <ul className={styles['consultation-list']}>
