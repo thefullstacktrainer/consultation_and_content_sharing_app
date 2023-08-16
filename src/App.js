@@ -27,7 +27,7 @@ const App = () => {
       <Header />
       <ConsultationList consultations={consultations} />
       <EnhancedConsultationCard {...consultationData} />
-      <ContentSharing contentList={contentList} />
+      <ContentSharing contentList={contentList} userId="1" />
     </div>
   );
 };
