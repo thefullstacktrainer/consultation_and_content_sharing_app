@@ -8,8 +8,9 @@ const ContentCard = ({ title, description, author }) => {
         setLikes(likes + 1);
     };
 
+    const isSelected = false;
     return (
-        <div className="content-card">
+        <div className={`content-card ${isSelected ? 'selected' : ''}`} >
             <h3>{title}</h3>
             <p>{description}</p>
             <p>Author: {author}</p>

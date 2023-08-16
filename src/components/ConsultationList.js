@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import ConsultationCard from './ConsultationCard';
+import styles from './ConsultationList.module.css';
 
 const ConsultationList = ({ consultations }) => {
     useEffect(() => {
@@ -24,6 +25,17 @@ const ConsultationList = ({ consultations }) => {
                     topic={consultation.topic}
                 />
             ))}
+            <ul className={styles['consultation-list']}>
+                {consultations.map((consultation, index) => (
+                    <li key={index} className={styles['consultation-item']}>
+                        <div>
+                            <h3 className={styles['consultation-title']}>{consultation.userName}</h3>
+                            <p className={styles['consultation-description']}>{consultation.topic}</p>
+                        </div>
+                        <span className={styles['consultation-action']}>View Details</span>
+                    </li>
+                ))}
+            </ul>
         </div>
     );
 };
