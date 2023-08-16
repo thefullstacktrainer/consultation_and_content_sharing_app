@@ -7,8 +7,14 @@ const ConsultationCard = ({ userName, consultationDate, topic }) => {
         setLikes(likes + 1);
     };
 
+    const cardStyle = {
+        border: '1px solid #ccc',
+        padding: '10px',
+        backgroundColor: '#f5f5f5',
+    };
+
     return (
-        <div className="consultation-card">
+        <div className="consultation-card" style={cardStyle}>
             <h3>{userName}</h3>
             <p>Date: {consultationDate}</p>
             <p>Topic: {topic}</p>
