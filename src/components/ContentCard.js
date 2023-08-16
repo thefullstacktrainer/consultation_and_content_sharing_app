@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './ContentCard.css';
 
 const ContentCard = ({ title, description, author }) => {
     const [likes, setLikes] = useState(0);

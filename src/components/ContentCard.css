@@ -1,0 +1,34 @@
+/* ContentCard.css */
+.content-card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    background-color: #f5f5f5;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.content-card h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.content-card p {
+    margin-top: 8px;
+    font-size: 14px;
+    color: #666;
+}
+
+.content-card .author {
+    margin-top: 8px;
+    font-size: 12px;
+    color: #999;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .content-card {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
