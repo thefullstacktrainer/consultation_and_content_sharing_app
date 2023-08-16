@@ -4,7 +4,7 @@ import ContentCard from './components/ContentCard';
 import ParentComponent from './components/ParentComponent';
 const App = () => {
   const consultationData = {
-    userName: 'John Doe',
+    userName: 'Johny Lever',
     consultationDate: '2023-08-12',
     topic: 'Healthcare'
   };
@@ -12,13 +12,13 @@ const App = () => {
   const contentData = {
     title: 'React Tips',
     description: 'Useful tips for working with React.',
-    author: 'Jane Smith'
+    author: 'Janaki Smrithi'
   };
 
   return (
     <div className="app">
       <ConsultationCard {...consultationData} />
-      <ContentCard {...contentData} />
+      <ContentCard title={contentData.title} description={contentData.description} author={contentData.author} />
       <ParentComponent />
     </div>
   );
