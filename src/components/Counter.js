@@ -6,17 +6,21 @@ class Counter extends Component {
         this.state = {
             count: 0
         };
+        // Binding the event handler to the instance
+        this.handleIncrement = this.handleIncrement.bind(this);
     }
 
-    increment = () => {
+    handleIncrement() {
+        // Updating state using setState
         this.setState({ count: this.state.count + 1 });
-    };
+    }
 
     render() {
         return (
             <div>
                 <p>Count: {this.state.count}</p>
-                <button onClick={this.increment}>Increment</button>
+                {/* Attaching event handler to button */}
+                <button onClick={this.handleIncrement}>Increment</button>
             </div>
         );
     }
