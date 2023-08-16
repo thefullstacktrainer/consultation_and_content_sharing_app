@@ -15,12 +15,13 @@ const App = () => {
     author: 'Jane Smith'
   };
 
+  const defaultAuthor = "Rajath";
   return (
     <div className="app">
       <ConsultationCard {...consultationData} />
       <ContentCard {...contentData} />
-      <ConsultationCard />
-      <ContentCard />
+      <ConsultationCard userName={defaultAuthor} />
+      <ContentCard author={defaultAuthor} />
     </div>
   );
 };
