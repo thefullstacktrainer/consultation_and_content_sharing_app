@@ -11,6 +11,13 @@ const ConsultationCard = ({ userName, consultationDate, topic }) => {
     );
 };
 
+ConsultationCard.defaultProps = {
+    userName: 'Anonymous',
+    consultationDate: 'N/A',
+    topic: 'General'
+};
+
+
 // Prop types validation
 ConsultationCard.propTypes = {
     userName: PropTypes.string.isRequired,
