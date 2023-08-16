@@ -13,11 +13,13 @@ import reportWebVitals from './reportWebVitals';
 // import ClassComponent from './components/ClassComponent'; // Adjust the import path as needed
 
 // ReactDOM.render(<ClassComponent />, document.getElementById('root'));
-
+import { AppProvider } from './components/context/AppContext'
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <AppProvider>
+      <App />
+    </AppProvider>
   </React.StrictMode>
 );
 
