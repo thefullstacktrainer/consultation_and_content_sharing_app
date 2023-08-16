@@ -5,6 +5,7 @@ import EnhancedConsultationCard from './components/EnhancedConsultationCard';
 import ContentSharingPage from './components/ContentSharingPage';
 import ConsultationSearch from './components/ConsultationSearch';
 import Header from './components/Header';
+import ConsultationForm from './components/ConsultationForm';
 
 const App = () => {
   const consultations = [
@@ -42,6 +43,7 @@ const App = () => {
         <h1>Online Consultation and Content Sharing Platform</h1>
         <ContentSharingPage />
       </div>
+      <ConsultationForm />
     </div>
   );
 };
