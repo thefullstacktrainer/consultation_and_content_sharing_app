@@ -36,7 +36,7 @@ const App = () => {
   return (
     <div>
       <Header />
-      {!isLoggedIn ? <LoginFormFunc onLogin={() => setIsLoggedIn(true)} /> : <div>
+      {!isLoggedIn ? <LoginFormFunc onLogin={() => setIsLoggedIn(true)} /> : <>
 
         <h2>Search Consultations</h2>
         <ConsultationSearch onSearch={handleSearch} />
@@ -48,7 +48,7 @@ const App = () => {
           <h1>Online Consultation and Content Sharing Platform</h1>
           <ContentSharingPage />
         </div>
-        <ConsultationForm /></div>}
+        <ConsultationForm /></>}
     </div>
   );
 };
