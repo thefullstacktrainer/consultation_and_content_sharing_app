@@ -6,8 +6,10 @@ import ContentSharingPage from './components/ContentSharingPage';
 import ConsultationSearch from './components/ConsultationSearch';
 import Header from './components/Header';
 import ConsultationForm from './components/ConsultationForm';
+import LoginForm from './components/login/LoginForm'
 
 const App = () => {
+  const isLoggedIn = false;
   const consultations = [
     { userName: 'Vikash', consultationDate: '2023-09-12', topic: 'Healthcare' },
     { userName: 'Raxith', consultationDate: '2023-09-15', topic: 'Technology' }
@@ -33,17 +35,18 @@ const App = () => {
   return (
     <div>
       <Header />
-      <h2>Search Consultations</h2>
-      <ConsultationSearch onSearch={handleSearch} />
-      <ConsultationList consultations={consultations} />
-      <EnhancedConsultationCard {...consultationData} />
+      {isLoggedIn ? <LoginForm /> : <div>
+        <h2>Search Consultations</h2>
+        <ConsultationSearch onSearch={handleSearch} />
+        <ConsultationList consultations={consultations} />
+        <EnhancedConsultationCard {...consultationData} />
 
-      <ContentSharing contentList={contentList} userId="1" />
-      <div>
-        <h1>Online Consultation and Content Sharing Platform</h1>
-        <ContentSharingPage />
-      </div>
-      <ConsultationForm />
+        <ContentSharing contentList={contentList} userId="1" />
+        <div>
+          <h1>Online Consultation and Content Sharing Platform</h1>
+          <ContentSharingPage />
+        </div>
+        <ConsultationForm /></div>}
     </div>
   );
 };
