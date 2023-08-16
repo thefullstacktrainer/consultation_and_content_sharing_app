@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ConsultationList from './components/ConsultationList';
 import ContentSharing from './components/ContentSharing';
 import EnhancedConsultationCard from './components/EnhancedConsultationCard';
@@ -6,6 +6,7 @@ import ContentSharingPage from './components/ContentSharingPage';
 import ConsultationSearch from './components/ConsultationSearch';
 import Header from './components/Header';
 import ConsultationForm from './components/ConsultationForm';
+import LoginFormFunc from './components/login/LoginFormFunc';
 
 const App = () => {
   const consultations = [
@@ -30,20 +31,24 @@ const App = () => {
     console.log('Searching for:', searchValue);
   };
 
+  const [isLoggedIn, setIsLoggedIn] = useState(true);
+
   return (
     <div>
       <Header />
-      <h2>Search Consultations</h2>
-      <ConsultationSearch onSearch={handleSearch} />
-      <ConsultationList consultations={consultations} />
-      <EnhancedConsultationCard {...consultationData} />
+      {!isLoggedIn ? <LoginFormFunc onLogin={() => setIsLoggedIn(true)} /> : <div>
 
-      <ContentSharing contentList={contentList} userId="1" />
-      <div>
-        <h1>Online Consultation and Content Sharing Platform</h1>
-        <ContentSharingPage />
-      </div>
-      <ConsultationForm />
+        <h2>Search Consultations</h2>
+        <ConsultationSearch onSearch={handleSearch} />
+        <ConsultationList consultations={consultations} />
+        <EnhancedConsultationCard {...consultationData} />
+
+        <ContentSharing contentList={contentList} userId="1" />
+        <div>
+          <h1>Online Consultation and Content Sharing Platform</h1>
+          <ContentSharingPage />
+        </div>
+        <ConsultationForm /></div>}
     </div>
   );
 };
