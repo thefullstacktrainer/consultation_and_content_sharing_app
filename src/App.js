@@ -4,6 +4,7 @@ import ContentSharing from './components/ContentSharing';
 import EnhancedConsultationCard from './components/EnhancedConsultationCard';
 import ContentSharingPage from './components/ContentSharingPage';
 import ConsultationSearch from './components/ConsultationSearch';
+import Header from './components/Header';
 
 const App = () => {
   const consultations = [
@@ -30,6 +31,7 @@ const App = () => {
 
   return (
     <div>
+      <Header />
       <h2>Search Consultations</h2>
       <ConsultationSearch onSearch={handleSearch} />
       <ConsultationList consultations={consultations} />
