@@ -15,11 +15,13 @@ import reportWebVitals from './reportWebVitals';
 // ReactDOM.render(<ClassComponent />, document.getElementById('root'));
 import store from './store';
 import { Provider } from 'react-redux';
+import Main from './Main';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      <App />
+      {/* <App /> */}
+      <Main />
     </Provider>
   </React.StrictMode>
 );
