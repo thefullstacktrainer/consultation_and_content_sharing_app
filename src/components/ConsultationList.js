@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import ConsultationCard from './ConsultationCard';
+import AddConsultationForm from './AddConsultationForm';
 
 const ConsultationList = ({ consultations }) => {
     useEffect(() => {
@@ -13,10 +14,17 @@ const ConsultationList = ({ consultations }) => {
         };
     }, []);
 
+    const [consultationsList, setConsultationsList] = useState(consultations);
+
+    const handleAddConsultation = (newConsultation) => {
+        // Add the new consultation to the list
+        setConsultationsList([...consultationsList, newConsultation]);
+    };
+
     return (
         <div className="consultation-list">
             <h2>Consultations</h2>
-            {consultations.map((consultation, index) => (
+            {consultationsList.map((consultation, index) => (
                 <ConsultationCard
                     key={index}
                     userName={consultation.userName}
@@ -25,6 +33,11 @@ const ConsultationList = ({ consultations }) => {
                     likes={consultation.likes}
                 />
             ))}
+            <br />
+            <div>
+                <AddConsultationForm onAddConsultation={handleAddConsultation} />
+            </div>
+            <br />
         </div>
     );
 };
