@@ -4,7 +4,7 @@ import ConsultationCard from './ConsultationCard';
 const EnhancedConsultationCard = ({ userName, consultationDate, topic, comments, likes }) => {
     return (
         <div className="enhanced-consultation-card">
-            <ConsultationCard userName={userName} consultationDate={consultationDate} topic={topic} />
+            <ConsultationCard userName={userName} consultationDate={consultationDate} topic={topic} likes={0} />
             <div className="comments-section">
                 <p>Comments: {comments.map((comment, index) => <b key={index}><i>{comment} </i></b>)}</p>
             </div>

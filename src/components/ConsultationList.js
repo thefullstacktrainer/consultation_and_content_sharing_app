@@ -22,6 +22,7 @@ const ConsultationList = ({ consultations }) => {
                     userName={consultation.userName}
                     consultationDate={consultation.consultationDate}
                     topic={consultation.topic}
+                    likes={consultation.likes}
                 />
             ))}
         </div>

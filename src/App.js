@@ -5,11 +5,12 @@ import EnhancedConsultationCard from './components/EnhancedConsultationCard';
 import ContentSharingPage from './components/ContentSharingPage';
 import ConsultationSearch from './components/ConsultationSearch';
 import Header from './components/Header';
+import Counter from './components/Counter';
 
 const App = () => {
   const consultations = [
-    { userName: 'Vikash', consultationDate: '2023-09-12', topic: 'Healthcare' },
-    { userName: 'Raxith', consultationDate: '2023-09-15', topic: 'Technology' }
+    { userName: 'Vikash', consultationDate: '2023-09-12', topic: 'Healthcare', likes: 0 },
+    { userName: 'Raxith', consultationDate: '2023-09-15', topic: 'Technology', likes: 5 }
   ];
 
   const contentList = [
@@ -42,6 +43,7 @@ const App = () => {
         <h1>Online Consultation and Content Sharing Platform</h1>
         <ContentSharingPage />
       </div>
+      <Counter />
     </div>
   );
 };
