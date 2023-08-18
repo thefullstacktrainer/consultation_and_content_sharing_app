@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import ConsultationCard from './ConsultationCard';
 import AddConsultationForm from './AddConsultationForm';
+import UncontrolledConsultationForm from './UncontrolledConsultationForm';
 
 const ConsultationList = ({ consultations }) => {
     useEffect(() => {
@@ -38,6 +39,9 @@ const ConsultationList = ({ consultations }) => {
                 <AddConsultationForm onAddConsultation={handleAddConsultation} />
             </div>
             <br />
+            <div>
+                <UncontrolledConsultationForm onAddConsultation={handleAddConsultation} />
+            </div>
         </div>
     );
 };
