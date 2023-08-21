@@ -1,0 +1,10 @@
+https://www.tutorialspoint.com/reactjs/reactjs_router.htm
+
+https://blog.webdevsimplified.com/2022-07/react-router/
+
+https://www.digitalocean.com/community/tutorials/how-to-handle-routing-in-react-apps-with-react-router
+
+https://github.com/remix-run/react-router/blob/main/docs/routers/create-hash-router.md
+
+https://reactrouter.com/en/main
+
