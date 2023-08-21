@@ -15,12 +15,13 @@ import HealthApp from './HealthDashboard/HealthApp';
 // import ClassComponent from './components/ClassComponent'; // Adjust the import path as needed
 
 // ReactDOM.render(<ClassComponent />, document.getElementById('root'));
-
+import MainElearning from './elearning/MainElearning';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     {/* <App /> */}
-    <HealthApp />
+    {/* <HealthApp /> */}
+    <MainElearning />
   </React.StrictMode>
 );
 
