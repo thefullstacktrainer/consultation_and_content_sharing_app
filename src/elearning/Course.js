@@ -1,11 +1,25 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 
-const Course = ({ id, name, desc, durationInMonths }) => {
+const Course = ({ id, name, desc, durationInMonths, cb }) => {
 
     let [likes, setLikes] = useState(0);
 
-    const incrLikes = () => setLikes(likes + 1)
+    const incrLikes = () => {
+        setLikes(likes + 1);
+    }
+    useEffect(() => {
+        cb();
+    }, [likes]);
+
+    const shoot = (a, b) => {
+
+        console.log(b);
+        /*
+        'b' represents the React event that triggered the function,
+        in this case the 'click' event
+        */
+    }
     return <>
         <br></br>
         Course Details
@@ -15,6 +29,7 @@ const Course = ({ id, name, desc, durationInMonths }) => {
         <div>Likes : {likes}</div>
         <button onClick={incrLikes}>Like</button>
         <br></br>
+        <button onClick={shoot}>Take the shot!</button>
     </>
 }
 

@@ -15,18 +15,18 @@ const ElearningRouter = () => {
         { name: "ReactJS", id: 2, desc: "This is ReactJS", durationInMonths: 1 }
     ]
     return (
-        <Router>
-            <Routes>
-                <Route path="/" element={<ElearningLayout />}>
-                    <Route path="/" element={<ElearningDashboard />} />
-                    <Route path="/home" element={<Home />} />
-                    <Route path="/blogs" element={<Blog />} />
-                    <Route path="/courses" element={<Courses courses={courses} />} />
-                    <Route path="/webinars" element={<Webinars />} />
-                    <Route path="*" element={<NoPage />} />
-                </Route>
-            </Routes>
-        </Router>
+
+        <Routes>
+            <Route path="/" element={<ElearningLayout />}>
+                <Route path="/" element={<ElearningDashboard />} />
+                <Route path="/home" element={<Home />} />
+                <Route path="/blogs" element={<Blog />} />
+                <Route path="/courses" element={<Courses courses={courses} />} />
+                <Route path="/webinars" element={<Webinars />} />
+                <Route path="*" element={<NoPage />} />
+            </Route>
+        </Routes>
+
     );
 };
 

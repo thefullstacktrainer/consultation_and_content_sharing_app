@@ -5,6 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 // import Test from './Test';
 import HealthApp from './HealthDashboard/HealthApp';
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 // import ReactDOM from 'react-dom';
 // import TestComponent from './components/TestComponent'; // Adjust the import path as needed
@@ -16,12 +17,16 @@ import HealthApp from './HealthDashboard/HealthApp';
 
 // ReactDOM.render(<ClassComponent />, document.getElementById('root'));
 import MainElearning from './elearning/MainElearning';
+import SportsDashboard from './sports_analytics/SportsDashboard';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    {/* <App /> */}
-    {/* <HealthApp /> */}
-    <MainElearning />
+    <Router>
+      {/* <App /> */}
+      {/* <HealthApp /> */}
+      {/* <MainElearning /> */}
+      <SportsDashboard />
+    </Router>
   </React.StrictMode>
 );
 
