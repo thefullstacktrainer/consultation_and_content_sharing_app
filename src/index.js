@@ -19,6 +19,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import MainElearning from './elearning/MainElearning';
 import SportsDashboard from './sports_analytics/SportsDashboard';
 import TailwindExample1 from './tailwind_examples/TailwindExample1';
+import MultiplayerGamePlatform from './OnlineMultiplayerGamePlatform/MultiplayerGamePlatform';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
@@ -26,8 +27,8 @@ root.render(
       {/* <App /> */}
       {/* <HealthApp /> */}
       {/* <MainElearning /> */}
-      <TailwindExample1 />
       {/* <SportsDashboard /> */}
+      <MultiplayerGamePlatform />
     </Router>
   </React.StrictMode>
 );
