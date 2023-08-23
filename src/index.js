@@ -19,6 +19,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import MainElearning from './elearning/MainElearning';
 import SportsDashboard from './sports_analytics/SportsDashboard';
 import TailwindExample1 from './tailwind_examples/TailwindExample1';
+import ContactExample from './tailwind_examples/ContactExample';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
@@ -26,8 +27,9 @@ root.render(
       {/* <App /> */}
       {/* <HealthApp /> */}
       {/* <MainElearning /> */}
-      <TailwindExample1 />
+      {/* <TailwindExample1 /> */}
       {/* <SportsDashboard /> */}
+      <ContactExample />
     </Router>
   </React.StrictMode>
 );
