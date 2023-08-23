@@ -11,7 +11,8 @@ function SportsDashboard() {
         }]
     return (
         <>
-            <div>SportsDashboard</div>
+            <div className="text-3xl font-bold underline">SportsDashboard</div>
+
             {games.map(game => <GameAnalysis key={game.id} {...game} />)}
         </>
     )
