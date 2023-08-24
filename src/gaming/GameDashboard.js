@@ -22,10 +22,12 @@ function GameDashboard() {
     return (
         <>
             <div>ListGames</div>
-            <GameContext.Provider value={{ customGames, dispatchGameEvent }}>
-                <AddGame />
-                <ListGames />
-            </GameContext.Provider>
+            <div className='p-2'>
+                <GameContext.Provider value={{ customGames, dispatchGameEvent }}>
+                    <AddGame />
+                    <ListGames />
+                </GameContext.Provider>
+            </div>
         </>
 
     )
