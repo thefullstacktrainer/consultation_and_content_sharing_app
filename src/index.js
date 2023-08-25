@@ -11,13 +11,15 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import UseRefExample1 from './components/hooks_examples/UseRefExample1';
 import UseReducerExample from './components/hooks_examples/UseReducerExample';
+import UseCallbackExample from './components/hooks_examples/UseCallbackExample';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     {/* <Main /> */}
     {/* <UseRefExample1 /> */}
-    <UseReducerExample />
+    {/* <UseReducerExample /> */}
+    <UseCallbackExample />
   </React.StrictMode>
 );
 
