@@ -2,9 +2,9 @@ import { Button, UncontrolledAlert, Card, CardImg, CardBody, CardTitle, CardSubt
 const BANNER = "https://i.imgur.com/CaKdFMq.jpg";
 const SideCard = () => (
     <>
-        <UncontrolledAlert color="danger" className="d-none d-lg-block">
+        {/* <UncontrolledAlert color="danger" className="d-none d-lg-block">
             <strong>Account not activated.</strong>
-        </UncontrolledAlert>
+        </UncontrolledAlert> */}
         <Card>
             <CardImg top width="100%" src={BANNER} alt="banner" />
             <CardBody>
