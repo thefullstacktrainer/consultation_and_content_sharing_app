@@ -6,14 +6,17 @@ import "bootstrap/dist/css/bootstrap.min.css";
 // Bootstrap Bundle JS
 import "bootstrap/dist/js/bootstrap.bundle.min";
 
-import Main from './components/Main';
+// import Main from './components/Main';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
+import UseRefExample1 from './components/hooks_examples/UseRefExample1';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Main />
+    {/* <Main /> */}
+    <UseRefExample1 />
+
   </React.StrictMode>
 );
 
