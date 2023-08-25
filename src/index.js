@@ -12,6 +12,7 @@ import reportWebVitals from './reportWebVitals';
 import UseRefExample1 from './components/hooks_examples/UseRefExample1';
 import UseReducerExample from './components/hooks_examples/UseReducerExample';
 import UseCallbackExample from './components/hooks_examples/UseCallbackExample';
+import UseMemoExample from './components/hooks_examples/UseMemoExample';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -19,7 +20,8 @@ root.render(
     {/* <Main /> */}
     {/* <UseRefExample1 /> */}
     {/* <UseReducerExample /> */}
-    <UseCallbackExample />
+    {/* <UseCallbackExample /> */}
+    <UseMemoExample />
   </React.StrictMode>
 );
 
