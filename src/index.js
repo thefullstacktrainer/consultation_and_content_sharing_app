@@ -10,13 +10,14 @@ import "bootstrap/dist/js/bootstrap.bundle.min";
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import UseRefExample1 from './components/hooks_examples/UseRefExample1';
+import UseReducerExample from './components/hooks_examples/UseReducerExample';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     {/* <Main /> */}
-    <UseRefExample1 />
-
+    {/* <UseRefExample1 /> */}
+    <UseReducerExample />
   </React.StrictMode>
 );
 
