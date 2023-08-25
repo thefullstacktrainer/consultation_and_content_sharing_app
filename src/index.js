@@ -9,11 +9,13 @@ import "bootstrap/dist/js/bootstrap.bundle.min";
 import Main from './components/Main';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
+import Dashboard from './components/cms/Dashboard';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Main />
+    {/* <Main /> */}
+    <Dashboard />
   </React.StrictMode>
 );
 
