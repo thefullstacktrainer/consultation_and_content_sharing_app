@@ -13,4 +13,4 @@ app.get('/', (req, res) => {
     res.json({ message: 'Hello world' })
 })
 // Starting server
-app.listen('5000')
+app.listen('5000', () => console.log("Started app in 5000 port"))
