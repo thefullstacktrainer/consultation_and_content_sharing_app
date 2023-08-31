@@ -14,6 +14,7 @@ function MultiSelectDropdown() {
             <select multiple onChange={handleSelectChange}>
                 <option value="technology">Technology</option>
                 <option value="science">Science</option>
+                <option value="react">ReactJS</option>
             </select>
         </div>
     );
