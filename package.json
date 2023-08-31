@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "node_modules/.bin/nodemon --harmony -e js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index.js"
+    "start": "node index.js",
+    "start_nodemon": "nodemon index.js"
   },
   "keywords": [],
   "author": "",
