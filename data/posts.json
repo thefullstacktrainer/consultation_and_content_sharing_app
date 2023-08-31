@@ -8,8 +8,8 @@
             "tag2",
             "tag3"
         ],
-        "createdAt": "Mon Aug 27 2023 15:16:17 GMT+0200 (CEST)",
-        "updatedAt": "Mon Aug 27 2023 15:16:17 GMT+0200 (CEST)"
+        "createdAt": "Mon Aug 28 2023 15:16:17 GMT+0200 (CEST)",
+        "updatedAt": "Mon Aug 28 2023 16:26:17 GMT+0200 (CEST)"
     },
     {
         "id": 2,
@@ -19,7 +19,7 @@
             "tag2",
             "tag4"
         ],
-        "createdAt": "Mon Aug 27 2023 16:17:18 GMT+0200 (CEST)",
-        "updatedAt": "Mon Aug 27 2023 16:17:18 GMT+0200 (CEST)"
+        "createdAt": "Mon Aug 28 2023 16:17:18 GMT+0200 (CEST)",
+        "updatedAt": "Mon Aug 28 2023 16:27:18 GMT+0200 (CEST)"
     }
 ]
