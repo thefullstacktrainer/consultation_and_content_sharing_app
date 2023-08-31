@@ -8,7 +8,15 @@ function ControlledComponentsExample() {
         <>
             <div>ControlledComponentsExample</div>
             <ContentEditor />
+            <br></br>
+            <div>
+
+            </div>
             <CategorySelector />
+            <br></br>
+            <div>
+
+            </div>
             <OptionsSelector />
         </>
 

@@ -18,7 +18,7 @@ function ContentEditor() {
     };
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} style={{ display: "flex" }}>
             <input type="text" value={title} onChange={handleTitleChange} placeholder="Title" />
             <textarea value={content} onChange={handleContentChange} placeholder="Content" />
             <button type="submit">Save</button>
