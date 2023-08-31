@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import ControlledComponentsExample from './components/controlled_components/ControlledComponentsExample';
+import UncontrolledComponents from './components/uncontrolled_components/UncontrolledComponents';
 
 // import ReactDOM from 'react-dom';
 // import TestComponent from './components/TestComponent'; // Adjust the import path as needed
@@ -19,7 +20,8 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     {/* <App /> */}
-    <ControlledComponentsExample />
+    {/* <ControlledComponentsExample /> */}
+    <UncontrolledComponents />
   </React.StrictMode>
 );
 
