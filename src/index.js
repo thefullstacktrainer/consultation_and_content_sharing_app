@@ -9,8 +9,8 @@ import Main from './consultation/Main';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <Router>
-    {/* <App /> */}
-    <Main />
+    <App />
+    {/* <Main /> */}
   </Router>
 );
 
