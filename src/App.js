@@ -1,20 +1,40 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, BrowserRouter as Router } from 'react-router-dom';
 import UserDetails from './UserDetails.js';
 import './App.css';
 import Navbar from './components/Navbar.js';
 import Home from './components/Home.js';
+import User from './components/User.js';
+import Profile from './components/Profile.js';
+import Transactions from './components/Transactions.js';
+import NotFound from './components/NotFound.js';
+import Layout from './components/Layout.js';
+import Transaction from './components/Transaction.js';
 
 function App() {
-
+  const transactions = [
+    { id: '1', details: 'Transaction 1' },
+    { id: '2', details: 'Transactions 2' },
+  ];
   return (
-    <div className="">
+    <>
       <Navbar />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="users/:userId" element={<UserDetails />} />
+        <Route element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="home" element={<Home />} />
+          <Route path="user" element={<User />}>
+            <Route index element={<Profile />} />
+            <Route path="profile" element={<Profile />} />
+            <Route path="transactions" element={<Transactions transactions={transactions} />}>
+              <Route path=':transactionId' element={<Transaction />} />
+            </Route> <Route path="*" element={<NotFound />} />
+          </Route>
+          <Route path="users/:userId" element={<UserDetails />} />
+          <Route path="*" element={<NotFound />} />
+        </Route>
       </Routes>
-    </div>
+    </>
   );
 }
 
