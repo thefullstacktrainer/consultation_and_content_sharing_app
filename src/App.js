@@ -1,6 +1,6 @@
 import React from 'react';
 import { Routes, Route, BrowserRouter as Router } from 'react-router-dom';
-import UserDetails from './UserDetails.js';
+import UserDetails from './components/UserDetails.js';
 import './App.css';
 import Navbar from './components/Navbar.js';
 import Home from './components/Home.js';
@@ -23,14 +23,14 @@ function App() {
         <Route element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="home" element={<Home />} />
-          <Route path="user" element={<User />}>
+          <Route path="users/:userId" element={<UserDetails />} >
             <Route index element={<Profile />} />
             <Route path="profile" element={<Profile />} />
             <Route path="transactions" element={<Transactions transactions={transactions} />}>
               <Route path=':transactionId' element={<Transaction />} />
-            </Route> <Route path="*" element={<NotFound />} />
+            </Route>
+            <Route path="*" element={<NotFound />} />
           </Route>
-          <Route path="users/:userId" element={<UserDetails />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>

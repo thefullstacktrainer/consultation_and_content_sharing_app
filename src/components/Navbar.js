@@ -13,7 +13,6 @@ function Navbar() {
                     )
                 })
             }
-            <Link to="/user">User</Link>
         </div>
     )
 }
