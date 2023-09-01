@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { NavLink, useParams } from 'react-router-dom';
 
 const Transaction = () => {
     const { transactionId } = useParams();
@@ -7,7 +7,7 @@ const Transaction = () => {
     return (
         <>
             <h2>Transaction Id: {transactionId}</h2>
-            <Link classname="mx-8 flex gap-6 my-8" to={-1}>Back to Transactions</Link>
+            <NavLink className={({ isActive }) => isActive ? 'fond-bold text-blue-700 mx-8 flex gap-6 my-8' : 'font-thin mx-8 flex gap-6 my-8'} to={-1}>Back to Transactions</NavLink>
         </>
     )
 }

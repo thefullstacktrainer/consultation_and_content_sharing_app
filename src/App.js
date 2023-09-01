@@ -1,10 +1,9 @@
 import React from 'react';
-import { Routes, Route, BrowserRouter as Router } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import UserDetails from './components/UserDetails.js';
 import './App.css';
 import Navbar from './components/Navbar.js';
 import Home from './components/Home.js';
-import User from './components/User.js';
 import Profile from './components/Profile.js';
 import Transactions from './components/Transactions.js';
 import NotFound from './components/NotFound.js';
@@ -24,7 +23,7 @@ function App() {
           <Route index element={<Home />} />
           <Route path="home" element={<Home />} />
           <Route path="users/:userId" element={<UserDetails />} >
-            <Route index element={<Profile />} />
+            <Route index element={<Navigate to="profile" replace />} />
             <Route path="profile" element={<Profile />} />
             <Route path="transactions" element={<Transactions transactions={transactions} />}>
               <Route path=':transactionId' element={<Transaction />} />
