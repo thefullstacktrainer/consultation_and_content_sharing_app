@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import Home from './Home';
+
 
 function Navbar() {
     const users = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
