@@ -1,6 +1,10 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 
 function UseEffectExample() {
+
+    useEffect(() => {
+        console.log('Component without dependency');
+    });
 
     useEffect(() => {
         console.log('Component mounted');
@@ -15,7 +19,8 @@ function UseEffectExample() {
     useEffect(() => {
         const interval = setInterval(() => {
             console.log('Interval tick');
-        }, 1000);
+            setCount(count => count + 1)
+        }, 10000);
 
         return () => {
             clearInterval(interval);
@@ -26,6 +31,7 @@ function UseEffectExample() {
     return (
         <>
             <div>UseEffectExample</div>
+            {count}
         </>
     )
 }

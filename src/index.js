@@ -13,16 +13,19 @@ import UseRefExample1 from './components/hooks_examples/UseRefExample1';
 import UseReducerExample from './components/hooks_examples/UseReducerExample';
 import UseCallbackExample from './components/hooks_examples/UseCallbackExample';
 import UseMemoExample from './components/hooks_examples/UseMemoExample';
-
+import UseEffectExample from './components/hooks_examples/UseEffectExample'
+import TestUseEffect from './components/hooks_examples/TestUseEffect';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
+  <>
     {/* <Main /> */}
     {/* <UseRefExample1 /> */}
     {/* <UseReducerExample /> */}
     {/* <UseCallbackExample /> */}
-    <UseMemoExample />
-  </React.StrictMode>
+    {/* <UseMemoExample /> */}
+    {/* <UseEffectExample /> */}
+    <TestUseEffect />
+  </>
 );
 
 // If you want to start measuring performance in your app, pass a function
